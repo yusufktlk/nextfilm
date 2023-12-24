@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 import TVCredits from '@/components/TVCredits';
+import TVRecommendations from '@/components/TVRecommendations';
 import TVSimilar from '@/components/TVSimilar';
 import React from 'react'
 
@@ -47,6 +48,11 @@ async function TVPage({params}) {
         <div className='mt-14'>
             <h1 className='text-4xl font-thin tracking-wide mt-4 lg:mt-8 ml-4 lg:ml-24'>Similar Series</h1>
             <TVSimilar id={id} />
+        </div>
+
+        <div className='mt-14'>
+            <h1 className='text-4xl font-thin tracking-wide mt-4 lg:mt-8 ml-4 lg:ml-24'>Recommendations</h1>
+            <TVRecommendations id={id} />
         </div>
     </div>
   )

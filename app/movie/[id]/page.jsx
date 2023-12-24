@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 import MovieCredits from '@/components/MovieCredits';
+import MovieRecommendations from '@/components/MovieRecommendations';
 import MovieSimilar from '@/components/MovieSimilar';
 import React from 'react'
 
@@ -63,6 +64,11 @@ async function MoviePage({params}) {
         <div>
             <h1 className='text-4xl font-thin tracking-wide mt-4 lg:mt-8 ml-4 lg:ml-24'>Similar Movies</h1>
             <MovieSimilar id={id} />
+        </div>
+
+        <div>
+            <h1 className='text-4xl font-thin tracking-wide mt-4 lg:mt-8 ml-4 lg:ml-24'>Recommendations</h1>
+            <MovieRecommendations id={id} />
         </div>
     </div>
   )
