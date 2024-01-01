@@ -46,9 +46,9 @@ async function MoviePage({params}) {
         <div className='lg:absolute top-[400px] left-[100px] z-50 text-center max-w-[520px]'>
           <h1 className='text-4xl font-bold'>{data.title}</h1>
           <div className='flex gap-x-2 text-[14px] mt-2 font-thin justify-center'>
-            <h5>{data.runtime}min</h5>-
-            <h3>{data.release_date.slice(0,4)}</h3>-
-            <h5>{data.genres[0].name}</h5>
+            <h5>{data?.runtime}min</h5>-
+            <h3>{data?.release_date.slice(0,4)}</h3>-
+            <h5>{data?.genres[0]?.name}</h5>
           </div>
           <p className='text-sm lg:w-[510px] tracking-widest mt-2 mb-4 lg:mb-0'>{data.overview}</p>
           <div className='ml-[180px] mt-4'>

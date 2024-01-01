@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 async function TVCredits(params) {
     const id = params.id
@@ -16,15 +17,19 @@ async function TVCredits(params) {
     }
 
     const credits = await getCredits()
+    
 
   return (
-    <div className="flex items-center justify-between mx-24 mt-8 text-sm tracking-wider">
-      {credits.cast.slice(0, 4).map((item) => (
+    <div className="flex items-center justify-normal gap-x-24 mx-24 mt-8 text-sm tracking-wider">
+      {credits.cast.slice(0, 5).map((item) => (
         <div key={item.id} className="flex items-center gap-2">
-          <img src={`https://image.tmdb.org/t/p/original/${item.profile_path}`} className="w-16 h-20 rounded-full" />
+          <Link href={`/character/${item.id}`}>
+            <img src={`https://image.tmdb.org/t/p/original/${item.profile_path}`} className="w-16 h-20 rounded-full" />
+          </Link>
           <div>
             <h1 className="mb-2 font-bold">{item.name}</h1>
             <h3 className="font-thin">{item.character}</h3>
+            {item.id}
           </div>
         </div>
       ))}
