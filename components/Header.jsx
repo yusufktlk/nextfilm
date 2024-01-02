@@ -14,7 +14,7 @@ function Header() {
             <h1>Movies</h1>
             <h1>TV Series</h1>
             <h1>Genres</h1>
-            <h1>Upcoming</h1>
+            <Link href={"/upcoming"}>Upcoming</Link>
         </div>
 
         <div className=''>
