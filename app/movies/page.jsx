@@ -6,8 +6,7 @@ import { MainContext, useContext } from '@/contextx/myContext';
 
 function Movies() {
 
-const [pageNum, setPageNum] = useState(4)
-
+const [pageNum, setPageNum] = useState(3)
 
   return (
     <MainContext.Provider value={{pageNum, setPageNum}}>

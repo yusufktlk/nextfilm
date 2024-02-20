@@ -1,6 +1,6 @@
 import React from 'react'
 
-async function MoviesFetch({pageNum,setPageNum, hi}) {
+async function MoviesFetch({pageNum,setPageNum}) {
     async function getMovies() {
         const options = {
             method: 'GET',
@@ -24,7 +24,6 @@ async function MoviesFetch({pageNum,setPageNum, hi}) {
                    <h1 className='absolute top-24 left-20 text-center max-w-[100px] -z-50 hover:z-50'>{item.title}</h1>
                </div>
            ))}
-           
        </div>
     </div>
   )
